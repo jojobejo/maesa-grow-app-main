@@ -3,9 +3,22 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Digital IT/Development/maesa-grow-app-main/app/src/main/res/layout/activity_certification.xml" value="0.2" />
+        <entry key="..\:/Digital IT/Development/maesa-grow-app-main/app/src/main/res/layout/activity_certification_adapter.xml" value="0.2" />
+        <entry key="..\:/Digital IT/Development/maesa-grow-app-main/app/src/main/res/layout/activity_detail_book.xml" value="0.2" />
+        <entry key="..\:/Digital IT/Development/maesa-grow-app-main/app/src/main/res/layout/activity_detail_certification.xml" value="0.34646739130434784" />
+        <entry key="..\:/Digital IT/Development/maesa-grow-app-main/app/src/main/res/layout/activity_main_menu_sopactivity.xml" value="0.2" />
+        <entry key="..\:/Digital IT/Development/maesa-grow-app-main/app/src/main/res/layout/activity_standard_op.xml" value="0.22" />
+        <entry key="..\:/Digital IT/Development/maesa-grow-app-main/app/src/main/res/layout/activity_standard_operation_procedure.xml" value="0.18229166666666666" />
+        <entry key="..\:/Digital IT/Development/maesa-grow-app-main/app/src/main/res/layout/activity_standard_procedure.xml" value="0.2" />
+        <entry key="..\:/Digital IT/Development/maesa-grow-app-main/app/src/main/res/layout/activity_standard_procedure_adapter.xml" value="0.48295454545454547" />
+        <entry key="..\:/Digital IT/Development/maesa-grow-app-main/app/src/main/res/layout/fragment_course.xml" value="0.2" />
+        <entry key="..\:/Digital IT/Development/maesa-grow-app-main/app/src/main/res/layout/fragment_crossfunction_sop.xml" value="0.2" />
         <entry key="..\:/Digital IT/Development/maesa-grow-app-main/app/src/main/res/layout/fragment_crossfunction_strandard.xml" value="0.2" />
         <entry key="..\:/Digital IT/Development/maesa-grow-app-main/app/src/main/res/layout/fragment_dashboard.xml" value="0.2" />
+        <entry key="..\:/Digital IT/Development/maesa-grow-app-main/app/src/main/res/layout/fragment_division_sop.xml" value="0.2" />
         <entry key="..\:/Digital IT/Development/maesa-grow-app-main/app/src/main/res/layout/fragment_standard_division.xml" value="0.2" />
+        <entry key="..\:/Digital IT/Development/maesa-grow-app-main/app/src/main/res/layout/fragment_standard_procedure.xml" value="0.2" />
         <entry key="app/src/main/res/drawable-anydpi/edittext_hide_eye_icon.xml" value="0.15703125" />
         <entry key="app/src/main/res/drawable/background_top_dashboard.xml" value="0.183984375" />
         <entry key="app/src/main/res/layout/activity_detail_book.xml" value="0.12329234972677595" />

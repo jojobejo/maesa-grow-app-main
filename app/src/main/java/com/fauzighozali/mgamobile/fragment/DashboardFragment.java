@@ -24,6 +24,7 @@ import com.fauzighozali.mgamobile.activity.LoginActivity;
 import com.fauzighozali.mgamobile.activity.OrientedActivity;
 import com.fauzighozali.mgamobile.activity.SeeAllBookActivity;
 import com.fauzighozali.mgamobile.activity.SeeAllVideoMiniVHSActivity;
+import com.fauzighozali.mgamobile.activity.StandardOpActivity;
 import com.fauzighozali.mgamobile.activity.VHSActivity;
 import com.fauzighozali.mgamobile.adapter.AllBookAdapter;
 import com.fauzighozali.mgamobile.adapter.VideoMiniVHSAdapter;
@@ -47,7 +48,7 @@ public class DashboardFragment extends Fragment {
 
     private static final String TAG = "DashboardFragment";
 
-    private LinearLayout llHardSkill, llSoftSkill, llOurCompany, llCorporateValue, llSeeAll, llSeeallMiniVhs;
+    private LinearLayout llHardSkill, llSoftSkill, llOurCompany, llCorporateValue, llSeeAll, llSeeallMiniVhs, llSop;
     private ImageView ivIdCard;
 
     private AllBookAdapter bookAdapter;
@@ -74,6 +75,7 @@ public class DashboardFragment extends Fragment {
         llCorporateValue = view.findViewById(R.id.linear_layout_corporate_value);
         llSeeAll = view.findViewById(R.id.linear_layout_seeall);
         llSeeallMiniVhs = view.findViewById(R.id.linear_layout_seeall_mini_vhs);
+        llSop = view.findViewById(R.id.linear_layout_standard_operation_procedure);
         ivIdCard = view.findViewById(R.id.image_view_id_card);
         recyclerView = view.findViewById(R.id.recycler_view_book);
         recyclerViewMiniVHS = view.findViewById(R.id.recycler_view_mini_vhs);
@@ -97,6 +99,10 @@ public class DashboardFragment extends Fragment {
         getDataBook();
         getDataVideo();
 
+        llSop.setOnClickListener(v -> {
+            Intent inten = new Intent(getContext(), StandardOpActivity.class);
+            startActivity(inten);
+        });
         llHardSkill.setOnClickListener(v -> {
             Intent intent = new Intent(getContext(), HardSkillActivity.class);
             startActivity(intent);

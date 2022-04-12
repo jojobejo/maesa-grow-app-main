@@ -8,6 +8,7 @@ import com.fauzighozali.mgamobile.model.GetResponseDetailUser;
 import com.fauzighozali.mgamobile.model.GetResponseInbox;
 import com.fauzighozali.mgamobile.model.GetResponseLeaderboard;
 import com.fauzighozali.mgamobile.model.GetResponseMessage;
+import com.fauzighozali.mgamobile.model.GetResponseSopDivision;
 import com.fauzighozali.mgamobile.model.GetResponseToken;
 import com.fauzighozali.mgamobile.model.GetResponseVideo;
 
@@ -109,4 +110,8 @@ public interface ApiService {
             @Field("score") int score,
             @Field("pre_test") int pre_test
     );
+
+    @GET("mobile/sop_list")
+    Call<GetResponseSopDivision> getSopDivision();
+
 }
