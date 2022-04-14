@@ -5,9 +5,13 @@ import com.google.gson.annotations.SerializedName;
 
 public class GetResponseToken {
 
+
     @SerializedName("company_id")
     @Expose
     private Integer companyId;
+    @SerializedName("organization_id")
+    @Expose
+    private Integer organizationId;
     @SerializedName("file")
     @Expose
     private String file;
@@ -17,6 +21,12 @@ public class GetResponseToken {
     @SerializedName("refreshToken")
     @Expose
     private int refreshToken;
+
+    public Integer getOrganization_id() {
+        return organizationId;
+    }
+
+    public void setOrganization_id(Integer organization_id) { this.organizationId = organization_id; }
 
     public Integer getCompanyId() {
         return companyId;

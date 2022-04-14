@@ -55,8 +55,13 @@ public class StandardOpActivity extends AppCompatActivity {
         service = RetrofitBuilder.createServiceWithAuth(ApiService.class, tokenManager);
 
         recyclerView = findViewById(R.id.recycler_view_division_sop);
-        layoutManager = new LinearLayoutManager(this);
+        layoutManager = new LinearLayoutManager(getApplication());
         recyclerView.setLayoutManager(layoutManager);
+
+        llCrossfunctionSOP.setOnClickListener(v -> {
+            Intent intent = new Intent(getApplicationContext(), CrossfunctionSopActivity.class);
+            startActivity(intent);
+        });
 
         getSopDivisionList();
 
@@ -69,6 +74,9 @@ public class StandardOpActivity extends AppCompatActivity {
     }
 
     private void getSopDivisionList() {
+
+//        int organization_id = tokenManager.getToken().getOrganization_id();
+
         call = service.getSopDivision();
         call.enqueue(new Callback<GetResponseSopDivision>() {
             @Override

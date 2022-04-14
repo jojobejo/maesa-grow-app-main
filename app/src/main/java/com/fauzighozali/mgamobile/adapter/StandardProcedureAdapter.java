@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.fauzighozali.mgamobile.R;
+import com.fauzighozali.mgamobile.activity.StandardOpDetailActivity;
 import com.fauzighozali.mgamobile.api.ApiService;
 import com.fauzighozali.mgamobile.jwt.TokenManager;
 import com.fauzighozali.mgamobile.model.GetResponseMessage;
@@ -28,9 +30,6 @@ public class StandardProcedureAdapter extends RecyclerView.Adapter<StandardProce
     private static final String TAG = "StandardProcedureAdapter";
     private List<Sop> dataModelArrayList;
     private Context context;
-    private ApiService service;
-    private TokenManager tokenManager;
-    private Call<GetResponseSopDivision> call;
 
     public StandardProcedureAdapter(List<Sop> dataModelArrayList, Context context){
         this.dataModelArrayList = dataModelArrayList;
@@ -52,6 +51,11 @@ public class StandardProcedureAdapter extends RecyclerView.Adapter<StandardProce
 
         holder.tvTitle.setText(sop.getTitle());
         holder.tvDesc.setText(sop.getDescription());
+
+        holder.itemView.setOnClickListener(v -> {
+            Intent intent = new Intent(v.getContext(), StandardOpDetailActivity.class);
+            v.getContext().startActivity(intent);
+        });
     }
 
     @Override

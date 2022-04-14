@@ -164,7 +164,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void navigateToWa() {
-        String mobileNumber = "81213240016";
+        String mobileNumber = "82264054784";
         boolean installed = appInstalledOrNot("com.whatsapp");
         if (installed){
             Intent intent = new Intent(Intent.ACTION_VIEW);

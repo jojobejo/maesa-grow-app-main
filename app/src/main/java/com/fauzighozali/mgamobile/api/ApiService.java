@@ -114,4 +114,10 @@ public interface ApiService {
     @GET("mobile/sop_list")
     Call<GetResponseSopDivision> getSopDivision();
 
+
+    //    @GET("web/event")
+    //    Call<GetResponseInbox> getInbox(
+    //            @Query("company_id") int company_id
+    //    );
+
 }

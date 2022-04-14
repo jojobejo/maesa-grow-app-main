@@ -28,12 +28,14 @@ public class TokenManager {
         editor.putString("API_TOKEN", token.getAccessToken()).commit();
         editor.putString("FILE", token.getFile()).commit();
         editor.putInt("COMPANY_ID", token.getCompanyId()).commit();
+        editor.putInt("ORGANIZATION_ID", token.getOrganization_id()).commit();
     }
 
     public void deleteToken() {
         editor.remove("API_TOKEN").commit();
         editor.remove("FILE").commit();
         editor.remove("COMPANY_ID").commit();
+        editor.remove("ORGANIZATION_ID").commit();
     }
 
     public GetResponseToken getToken() {
@@ -41,6 +43,7 @@ public class TokenManager {
         token.setAccessToken(prefs.getString("API_TOKEN", null));
         token.setFile(prefs.getString("FILE", null));
         token.setCompanyId(prefs.getInt("COMPANY_ID", 0));
+        token.setOrganization_id(prefs.getInt("ORGANIZATION_ID",0));
         return token;
     }
 }
