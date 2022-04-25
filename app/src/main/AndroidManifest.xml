@@ -15,6 +15,12 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".activity.FileReaderSopActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.XampleTabActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.CrossfunctionSopActivity"
             android:exported="false" />
         <activity

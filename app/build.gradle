@@ -20,6 +20,9 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
@@ -50,10 +53,15 @@ dependencies {
 
     // Image loading lib
     implementation 'com.github.bumptech.glide:glide:4.9.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
 
     // Youtube lib
     implementation 'com.github.PierfrancescoSoffritti:AndroidYouTubePlayer:7.0.1'
+    implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
+
+    // PdfViewer
     implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
 
     // Bind view

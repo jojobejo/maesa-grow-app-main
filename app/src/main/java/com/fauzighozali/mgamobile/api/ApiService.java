@@ -4,8 +4,10 @@ import com.fauzighozali.mgamobile.model.GetResponseBook;
 import com.fauzighozali.mgamobile.model.GetResponseCalendar;
 import com.fauzighozali.mgamobile.model.GetResponseCourse;
 import com.fauzighozali.mgamobile.model.GetResponseDetailCourse;
+import com.fauzighozali.mgamobile.model.GetResponseDetailSop;
 import com.fauzighozali.mgamobile.model.GetResponseDetailUser;
 import com.fauzighozali.mgamobile.model.GetResponseInbox;
+import com.fauzighozali.mgamobile.model.GetResponseLampiran;
 import com.fauzighozali.mgamobile.model.GetResponseLeaderboard;
 import com.fauzighozali.mgamobile.model.GetResponseMessage;
 import com.fauzighozali.mgamobile.model.GetResponseSopDivision;
@@ -114,10 +116,18 @@ public interface ApiService {
     @GET("mobile/sop_list")
     Call<GetResponseSopDivision> getSopDivision();
 
+    @GET("mobile/sop_detail/{id}")
+    Call<GetResponseDetailSop> getSopDetail(
+            @Path("id") int id
+    );
 
-    //    @GET("web/event")
-    //    Call<GetResponseInbox> getInbox(
-    //            @Query("company_id") int company_id
-    //    );
+    @GET("mobile/lampiran/")
+    Call<GetResponseDetailSop> getLampiran();
+
+    @POST("mobile/accept_sop")
+    @FormUrlEncoded
+    Call<GetResponseMessage> acceptDetailSop(
+            @Field("id") int id
+    );
 
 }

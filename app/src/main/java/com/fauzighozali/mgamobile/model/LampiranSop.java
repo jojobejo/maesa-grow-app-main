@@ -20,6 +20,26 @@ public class LampiranSop {
     @SerializedName("file")
     @Expose
     private String file;
+    @SerializedName("status")
+    @Expose
+    private Integer status;
+
+    public LampiranSop(Integer id, Integer company_id, Integer sop_id, String name, String file, int status) {
+        this.id = id;
+        this.company_id = company_id;
+        this.sop_id = sop_id;
+        this.name = name;
+        this.file = file;
+        this.status = status;
+    }
+
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
 
     public Integer getId() {
         return id;
@@ -60,4 +80,5 @@ public class LampiranSop {
     public void setFile(String file) {
         this.file = file;
     }
+
 }

@@ -17,6 +17,7 @@ import com.fauzighozali.mgamobile.api.ApiService;
 import com.fauzighozali.mgamobile.api.RetrofitBuilder;
 import com.fauzighozali.mgamobile.jwt.TokenManager;
 import com.fauzighozali.mgamobile.model.GetResponseSopDivision;
+import com.fauzighozali.mgamobile.model.LampiranSop;
 import com.fauzighozali.mgamobile.model.Sop;
 
 import java.util.List;
@@ -74,15 +75,11 @@ public class StandardOpActivity extends AppCompatActivity {
     }
 
     private void getSopDivisionList() {
-
-//        int organization_id = tokenManager.getToken().getOrganization_id();
-
         call = service.getSopDivision();
         call.enqueue(new Callback<GetResponseSopDivision>() {
             @Override
             public void onResponse(Call<GetResponseSopDivision> call, Response<GetResponseSopDivision> response) {
                 Log.w(TAG, "onResponse: " + response);
-
                 if(response.isSuccessful()){
                     List<Sop> sopList = response.body().getData();
                     if (sopList.size() > 0){
@@ -97,7 +94,7 @@ public class StandardOpActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<GetResponseSopDivision> call, Throwable t) {
-                Log.w(TAG, "onFailre" +t.getMessage());
+                Log.w(TAG, "onFailure" +t.getMessage());
             }
         });
     }
