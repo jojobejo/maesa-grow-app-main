@@ -1,63 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".activity.StandardOpActivity">
+    tools:context=".fragment.SopDivisionFragment">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/app_bar"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/gradient_start_color">
+            android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/toolbar_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Title toolbar"
-                android:textColor="@color/white"
-                android:textStyle="bold"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="15sp"
+                android:layout_marginTop="10dp"
+                android:text="List Standard Operational Procedure"
+                android:textColor="@color/black"
                 android:textSize="20sp"/>
 
-        </androidx.appcompat.widget.Toolbar>
-
-    </com.google.android.material.appbar.AppBarLayout>
-
-    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-        android:id="@+id/swipe_refresh_layout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/app_bar"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp">
-
+        </RelativeLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view_division_sop"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginTop="20dp" />
 
         <LinearLayout
-            android:id="@+id/linear_layout_empty_course"
+            android:id="@+id/linear_layout_empty_sop"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@id/app_bar"
             android:orientation="vertical"
-            android:gravity="center"
+            android:layout_gravity="center"
             android:visibility="gone">
 
             <ImageView
@@ -83,7 +67,5 @@
 
         </LinearLayout>
 
-
-    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
-
-</RelativeLayout>
+    </LinearLayout>
+</ScrollView>

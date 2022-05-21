@@ -24,6 +24,7 @@ import com.fauzighozali.mgamobile.activity.LoginActivity;
 import com.fauzighozali.mgamobile.activity.OrientedActivity;
 import com.fauzighozali.mgamobile.activity.SeeAllBookActivity;
 import com.fauzighozali.mgamobile.activity.SeeAllVideoMiniVHSActivity;
+import com.fauzighozali.mgamobile.activity.SopTabLayoutMenuActivity;
 import com.fauzighozali.mgamobile.activity.StandardOpActivity;
 import com.fauzighozali.mgamobile.activity.VHSActivity;
 import com.fauzighozali.mgamobile.adapter.AllBookAdapter;

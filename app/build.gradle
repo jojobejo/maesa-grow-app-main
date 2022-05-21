@@ -64,6 +64,9 @@ dependencies {
     // PdfViewer
     implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
 
+    //DextlerLibrary
+    implementation 'com.karumi:dexter:6.2.3'
+
     // Bind view
     implementation 'com.jakewharton:butterknife:10.1.0'
     annotationProcessor "com.jakewharton:butterknife-compiler:10.1.0"

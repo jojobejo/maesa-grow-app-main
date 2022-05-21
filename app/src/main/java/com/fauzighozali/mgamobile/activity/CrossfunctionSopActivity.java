@@ -18,13 +18,12 @@ public class CrossfunctionSopActivity extends AppCompatActivity {
 
     private static final String TAG = "CrossfunctionSOP";
 
-    private LinearLayout llDivisionSop, llCrossfunctionSOP , llEmptySop;
+    private LinearLayout llDivisionSop,llEmptySop;
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
 
    private ApiService service;
    private TokenManager tokenManager;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +31,6 @@ public class CrossfunctionSopActivity extends AppCompatActivity {
         setContentView(R.layout.activity_crossfunction_sop);
 
         llDivisionSop = findViewById(R.id.linear_layout_Division_sop);
-        llCrossfunctionSOP = findViewById(R.id.linear_layout_Crossfunction_sop);
         llEmptySop = findViewById(R.id.linear_layout_empty_course);
 
         tokenManager = TokenManager.getInstance(getSharedPreferences("prefs", Context.MODE_PRIVATE));

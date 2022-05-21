@@ -83,7 +83,7 @@ public class StandardProcedureAdapter extends RecyclerView.Adapter<StandardProce
     public class StandardProcedureViewHolder extends RecyclerView.ViewHolder {
 
         private ImageView ivSop;
-        private TextView tvTitle, tvDesc,tvLampiran;
+        private TextView tvTitle, tvDesc,tvLampiran,tvStatus;
 
         public StandardProcedureViewHolder (View itemView){
             super(itemView);

@@ -6,20 +6,28 @@
         <entry key="..\:/Digital IT/Development/maesa-grow-app-main/app/src/main/res/layout/activity_certification.xml" value="0.2" />
         <entry key="..\:/Digital IT/Development/maesa-grow-app-main/app/src/main/res/layout/activity_certification_adapter.xml" value="0.2" />
         <entry key="..\:/Digital IT/Development/maesa-grow-app-main/app/src/main/res/layout/activity_course_adapter.xml" value="0.3333333333333333" />
+        <entry key="..\:/Digital IT/Development/maesa-grow-app-main/app/src/main/res/layout/activity_crossfunction_procedure_adapter.xml" value="0.27447916666666666" />
         <entry key="..\:/Digital IT/Development/maesa-grow-app-main/app/src/main/res/layout/activity_crossfunction_sop.xml" value="0.1859375" />
         <entry key="..\:/Digital IT/Development/maesa-grow-app-main/app/src/main/res/layout/activity_detail_book.xml" value="0.2" />
-        <entry key="..\:/Digital IT/Development/maesa-grow-app-main/app/src/main/res/layout/activity_detail_certification.xml" value="0.34646739130434784" />
+        <entry key="..\:/Digital IT/Development/maesa-grow-app-main/app/src/main/res/layout/activity_detail_certification.xml" value="0.264" />
+        <entry key="..\:/Digital IT/Development/maesa-grow-app-main/app/src/main/res/layout/activity_file_reader.xml" value="0.1859375" />
+        <entry key="..\:/Digital IT/Development/maesa-grow-app-main/app/src/main/res/layout/activity_file_reader_crossfunction.xml" value="0.1" />
+        <entry key="..\:/Digital IT/Development/maesa-grow-app-main/app/src/main/res/layout/activity_file_reader_lampiran.xml" value="0.2" />
         <entry key="..\:/Digital IT/Development/maesa-grow-app-main/app/src/main/res/layout/activity_file_reader_sop.xml" value="0.2" />
+        <entry key="..\:/Digital IT/Development/maesa-grow-app-main/app/src/main/res/layout/activity_guide.xml" value="0.1" />
         <entry key="..\:/Digital IT/Development/maesa-grow-app-main/app/src/main/res/layout/activity_history_detail_certification.xml" value="0.1796875" />
         <entry key="..\:/Digital IT/Development/maesa-grow-app-main/app/src/main/res/layout/activity_inbox_adapter.xml" value="0.2" />
+        <entry key="..\:/Digital IT/Development/maesa-grow-app-main/app/src/main/res/layout/activity_lampiran_sop.xml" value="0.2" />
         <entry key="..\:/Digital IT/Development/maesa-grow-app-main/app/src/main/res/layout/activity_lampiran_standard_procedure_adapter.xml" value="0.3333333333333333" />
         <entry key="..\:/Digital IT/Development/maesa-grow-app-main/app/src/main/res/layout/activity_main_menu_sopactivity.xml" value="0.2" />
         <entry key="..\:/Digital IT/Development/maesa-grow-app-main/app/src/main/res/layout/activity_pendahuluan.xml" value="0.1" />
+        <entry key="..\:/Digital IT/Development/maesa-grow-app-main/app/src/main/res/layout/activity_sop_tab_layout_menu.xml" value="0.1962962962962963" />
         <entry key="..\:/Digital IT/Development/maesa-grow-app-main/app/src/main/res/layout/activity_standard_op.xml" value="0.3333333333333333" />
         <entry key="..\:/Digital IT/Development/maesa-grow-app-main/app/src/main/res/layout/activity_standard_op_detail.xml" value="0.22" />
         <entry key="..\:/Digital IT/Development/maesa-grow-app-main/app/src/main/res/layout/activity_standard_operation_procedure.xml" value="0.18229166666666666" />
         <entry key="..\:/Digital IT/Development/maesa-grow-app-main/app/src/main/res/layout/activity_standard_procedure.xml" value="0.2" />
         <entry key="..\:/Digital IT/Development/maesa-grow-app-main/app/src/main/res/layout/activity_standard_procedure_adapter.xml" value="0.22" />
+        <entry key="..\:/Digital IT/Development/maesa-grow-app-main/app/src/main/res/layout/activity_tampil_lampiran_main.xml" value="0.2" />
         <entry key="..\:/Digital IT/Development/maesa-grow-app-main/app/src/main/res/layout/detail_inbox.xml" value="0.2" />
         <entry key="..\:/Digital IT/Development/maesa-grow-app-main/app/src/main/res/layout/fragment_course.xml" value="0.2" />
         <entry key="..\:/Digital IT/Development/maesa-grow-app-main/app/src/main/res/layout/fragment_crossfunction_sop.xml" value="0.2" />
@@ -27,6 +35,8 @@
         <entry key="..\:/Digital IT/Development/maesa-grow-app-main/app/src/main/res/layout/fragment_dashboard.xml" value="0.2" />
         <entry key="..\:/Digital IT/Development/maesa-grow-app-main/app/src/main/res/layout/fragment_division_sop.xml" value="0.2" />
         <entry key="..\:/Digital IT/Development/maesa-grow-app-main/app/src/main/res/layout/fragment_page_one.xml" value="0.2" />
+        <entry key="..\:/Digital IT/Development/maesa-grow-app-main/app/src/main/res/layout/fragment_sop_crossfunction.xml" value="0.2" />
+        <entry key="..\:/Digital IT/Development/maesa-grow-app-main/app/src/main/res/layout/fragment_sop_division.xml" value="0.2" />
         <entry key="..\:/Digital IT/Development/maesa-grow-app-main/app/src/main/res/layout/fragment_standard_division.xml" value="0.2" />
         <entry key="..\:/Digital IT/Development/maesa-grow-app-main/app/src/main/res/layout/fragment_standard_procedure.xml" value="0.2" />
         <entry key="..\:/Digital IT/Development/maesa-grow-app-main/app/src/main/res/layout/fragment_tab_sop.xml" value="0.1859375" />

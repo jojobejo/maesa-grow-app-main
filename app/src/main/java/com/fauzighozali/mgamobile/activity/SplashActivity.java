@@ -1,7 +1,10 @@
 package com.fauzighozali.mgamobile.activity;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Handler;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,6 +16,7 @@ import com.fauzighozali.mgamobile.R;
 
 public class SplashActivity extends AppCompatActivity {
 
+    private static final int REQUEST_CODE = 100 ;
     private static int SPLASH_TIME_OUT = 3000;
 
     @Override
@@ -20,6 +24,11 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
+            if (checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED){
+                requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, REQUEST_CODE);
+            }
+        }
         hideSystemUI(this);
 
         new Handler().postDelayed(() -> {

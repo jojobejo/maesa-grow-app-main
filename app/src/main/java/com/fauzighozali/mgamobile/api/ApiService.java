@@ -122,12 +122,17 @@ public interface ApiService {
     );
 
     @GET("mobile/lampiran/")
-    Call<GetResponseDetailSop> getLampiran();
+    Call<GetResponseLampiran> getLampiran();
 
-    @POST("mobile/accept_sop")
-    @FormUrlEncoded
-    Call<GetResponseMessage> acceptDetailSop(
-            @Field("id") int id
+
+    @GET("mobile/sop_status/{id}")
+    Call<GetResponseDetailSop> changeRequestStatus(
+            @Path("id") int id
+    );
+
+    @GET("mobile/sop_lamp_status/{id}")
+    Call<GetResponseLampiran> changeRequestStatusLampiran(
+            @Path("id") int id
     );
 
 }

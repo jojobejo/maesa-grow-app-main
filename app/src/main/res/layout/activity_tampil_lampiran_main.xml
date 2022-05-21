@@ -5,11 +5,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.FileReaderSopActivity">
+    tools:context=".activity.TampilLampiranMainActivity">
 
-    <WebView
-        android:id="@+id/web_view_pdf"
+    <TextView
+        android:id="@+id/text_view_id_lampiran"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="ini nanti id"/>
+
 
 </RelativeLayout>

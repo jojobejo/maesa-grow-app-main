@@ -1,15 +1,20 @@
 package com.fauzighozali.mgamobile.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.fauzighozali.mgamobile.R;
 import com.fauzighozali.mgamobile.adapter.StandardProcedureAdapter;
@@ -30,7 +35,10 @@ public class StandardOpActivity extends AppCompatActivity {
 
     private static final String TAG = "StandardOpActivity" ;
 
-    private LinearLayout llDivisionSOP , llCrossfunctionSOP, llEmptySop;
+    private Toolbar mToolbar;
+    private TextView mTilteToolbar;
+    private SwipeRefreshLayout swipeRefreshLayout;
+    private LinearLayout llDivisionSOP , llEmptySop;
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
 
@@ -44,9 +52,20 @@ public class StandardOpActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_standard_op);
 
+
+        mToolbar = findViewById(R.id.toolbar);
+        mTilteToolbar = mToolbar.findViewById(R.id.toolbar_title);
+        mTilteToolbar.setText("Standar Oprasional Procedure List");
+        swipeRefreshLayout = findViewById(R.id.swipe_refresh_layout);
         llDivisionSOP = findViewById(R.id.linear_layout_Division_sop);
-        llCrossfunctionSOP = findViewById(R.id.linear_layout_Crossfunction_sop);
         llEmptySop = findViewById(R.id.linear_layout_empty_course);
+
+        setSupportActionBar(mToolbar);
+        if (getSupportActionBar()!= null){
+            getSupportActionBar().setTitle("");
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_arrow_back);
+        }
 
         tokenManager = TokenManager.getInstance(getSharedPreferences("prefs", Context.MODE_PRIVATE));
         if (tokenManager.getToken() == null){
@@ -59,10 +78,11 @@ public class StandardOpActivity extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(getApplication());
         recyclerView.setLayoutManager(layoutManager);
 
-        llCrossfunctionSOP.setOnClickListener(v -> {
-            Intent intent = new Intent(getApplicationContext(), CrossfunctionSopActivity.class);
-            startActivity(intent);
+        swipeRefreshLayout.setOnRefreshListener(()->{
+            getSopDivisionList();
+            new Handler().postDelayed(()-> swipeRefreshLayout.setRefreshing(false), 2500);
         });
+        swipeRefreshLayout.setColorSchemeResources(R.color.gradient_start_color);
 
         getSopDivisionList();
 
@@ -98,6 +118,4 @@ public class StandardOpActivity extends AppCompatActivity {
             }
         });
     }
-
-
 }

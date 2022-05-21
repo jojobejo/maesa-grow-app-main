@@ -17,19 +17,19 @@
         android:layout_marginBottom="7dp">
 
         <ImageView
-            android:id="@+id/image_view_doc_sop"
+            android:id="@+id/image_view_doc_crossfunction"
             android:layout_width="50dp"
             android:layout_height="35dp"
             android:src="@drawable/ic_pendahuluan" />
 
         <TextView
-            android:id="@+id/text_view_title_lampiran_sop"
+            android:id="@+id/text_view_title_crossfunction"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/image_view_doc_sop"
+            android:layout_toRightOf="@id/image_view_doc_crossfunction"
             android:ellipsize="end"
             android:maxLines="2"
-            android:text="ini nantinya judul "
+            android:text="ini judul sop crossfunction"
             android:textColor="@color/black"
             android:textSize="17sp" />
 
@@ -47,6 +47,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:visibility="gone" />
+
 
     </RelativeLayout>
 

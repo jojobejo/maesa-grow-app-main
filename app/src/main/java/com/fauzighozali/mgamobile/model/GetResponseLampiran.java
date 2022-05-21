@@ -1,9 +1,44 @@
 package com.fauzighozali.mgamobile.model;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 import java.util.List;
 
 public class GetResponseLampiran {
 
+    private LampiranSop lampiranSop;
+
+    @SerializedName("message")
+    @Expose
+    private String message;
+    @SerializedName("status")
+    @Expose
+    private int status;
+
+    public LampiranSop getLampiranSop() {
+        return lampiranSop;
+    }
+
+    public void setLampiranSop(LampiranSop lampiranSop) {
+        this.lampiranSop = lampiranSop;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
 
     private List<LampiranSop> data;
 

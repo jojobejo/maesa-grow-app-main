@@ -31,8 +31,20 @@ public class Sop {
     @SerializedName("status")
     @Expose
     private Integer status;
+
     @SerializedName("lampiran")
     private List<LampiranSop> lampiranSopList;
+
+    @SerializedName("crossfunction")
+    private List<Crossfunction> crossfunctionList;
+
+    public List<Crossfunction> getCrossfunctionList() {
+        return crossfunctionList;
+    }
+
+    public void setCrossfunctionList(List<Crossfunction> crossfunctionList) {
+        this.crossfunctionList = crossfunctionList;
+    }
 
     public List<LampiranSop> getLampiranSopList() {
         return lampiranSopList;
