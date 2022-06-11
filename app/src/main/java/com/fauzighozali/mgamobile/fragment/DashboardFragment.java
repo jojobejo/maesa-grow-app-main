@@ -14,8 +14,10 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.fauzighozali.mgamobile.R;
 import com.fauzighozali.mgamobile.activity.CertificationActivity;
@@ -65,6 +67,8 @@ public class DashboardFragment extends Fragment {
     private Call<GetResponseBook> call;
     private Call<GetResponseVideo> callVideo;
 
+//    private Button btnCobaToken;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_dashboard, container, false);
@@ -80,6 +84,11 @@ public class DashboardFragment extends Fragment {
         ivIdCard = view.findViewById(R.id.image_view_id_card);
         recyclerView = view.findViewById(R.id.recycler_view_book);
         recyclerViewMiniVHS = view.findViewById(R.id.recycler_view_mini_vhs);
+//        btnCobaToken = view.findViewById(R.id.btn_get_token);
+//
+//        btnCobaToken.setOnClickListener(v -> {
+//            Toast.makeText(v.getContext(), ""+tokenManager.getToken(), Toast.LENGTH_SHORT).show();
+//        });
 
         layoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
         recyclerView.setLayoutManager(layoutManager);

@@ -1,11 +1,13 @@
 package com.fauzighozali.mgamobile.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
@@ -34,6 +36,7 @@ public class FileReaderActivity extends AppCompatActivity {
     private static final String TAG = "FileReaderActivity";
     WebView webView;
     ProgressBar progressBar;
+    private SwipeRefreshLayout swipeRefreshLayout;
 
     private TextView txtTesting;
 
@@ -41,7 +44,7 @@ public class FileReaderActivity extends AppCompatActivity {
     private ApiService service;
     private Call<GetResponseDetailSop> call;
 
-    @SuppressLint("SetJavaScriptEnabled")
+    @SuppressLint({"SetJavaScriptEnabled", "ResourceAsColor"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,7 +53,17 @@ public class FileReaderActivity extends AppCompatActivity {
 
         webView = findViewById(R.id.web_view_file_sop);
         progressBar = findViewById(R.id.progress_bar_sop);
+        swipeRefreshLayout = findViewById(R.id.swipe_refresh_layout_reader);
+
         progressBar.setVisibility(View.VISIBLE);
+
+        swipeRefreshLayout.setOnRefreshListener(()->{
+            displayFileSop();
+            new Handler().postDelayed(()-> swipeRefreshLayout.setRefreshing(false), 2500);
+        });
+        swipeRefreshLayout.setColorSchemeColors(
+                R.color.gradient_start_color
+        );
 
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setBuiltInZoomControls(true);
@@ -74,8 +87,14 @@ public class FileReaderActivity extends AppCompatActivity {
         }
         service = RetrofitBuilder.createServiceWithAuth(ApiService.class, tokenManager);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
-        displayFileSop();
 
+        displayFileSop();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        displayFileSop();
     }
 
     private void displayFileSop(){

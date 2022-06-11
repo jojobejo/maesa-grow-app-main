@@ -66,7 +66,7 @@ public class CrossfunctionProcedureAdapter extends RecyclerView.Adapter<Crossfun
 
     holder.itemView.setOnClickListener(v -> {
         Intent intent = new Intent(v.getContext(), FileReaderCrossfunctionActivity.class);
-        intent.putExtra("file",sop.getFile());
+        intent.putExtra("file",crossfunction.getFile());
         v.getContext().startActivity(intent);
     });
 

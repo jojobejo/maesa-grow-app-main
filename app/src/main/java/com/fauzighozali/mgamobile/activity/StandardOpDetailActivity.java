@@ -101,7 +101,6 @@ public class StandardOpDetailActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
         displayDataSop();
         displayListLampiran();
-//        displayButtonDownloadLampiran();
         displayListCrossfunction();
     }
 
@@ -156,6 +155,7 @@ public class StandardOpDetailActivity extends AppCompatActivity {
 //    private  void displayButtonDownloadLampiran(){
 //        Intent intent = getIntent();
 //        callSop = service.getSopDetail(intent.getIntExtra("id", 0));
+    // callSop = service.getSopDetail(intent.getIntExtra("id",0));
 //        callSop.enqueue(new Callback<GetResponseDetailSop>() {
 //            @Override
 //            public void onResponse(Call<GetResponseDetailSop> call, Response<GetResponseDetailSop> response) {
